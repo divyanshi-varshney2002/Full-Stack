@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      main article
+      main aside{
+        display: inline;
+      }
+      #ttt{
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+        background-color: blue;
+        transition: 1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        font-size: larger;
+        color: white;
+        
+      }
+      #ttt:hover{
+        border-radius: 50%;
+        background-color: green;
+      }
+      li:first-child{
+        color: blue;
+      }
+      li:nth-child(2n+3){
+        color: red;
+      }
+      li:nth-of-type(2n+3){
+        color: blueviolet;
+      }
+      h1::before{
+        content: 'ordered list';
+        color: brown;
+      }
+      h1::after{
+        content: 'ordered list';
+        color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ordered List</h1>
+    <ol type="A" start="12">
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+      <li>E</li>
+    </ol>
+    <h1>Unordered List</h1>
+    <ul type="square">
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+      <li>E</li>
+    </ul>
+    <a href="https://www.google.com" target="_blank">Google</a>
+
+    <br /><br />
+    <form action="" method="">
+      <fieldset>
+        <legend>Enter your details</legend>
+
+        name:<input type="text" placeholder="Username" /> <br /><br />
+        password:<input type="password" placeholder="Enter password" />
+        <br /><br />
+        Date:<input type="date" placeholder="Username" /> <br /><br />
+        Time:<input type="time" placeholder="Username" /> <br /><br />
+        File:<input type="file" placeholder="Username" /> <br /><br />
+        Color:<input type="color" placeholder="Username" /> <br /><br />
+        Bio: <textarea></textarea> <br /><br />
+        <button>submit</button>
+      </fieldset>
+    </form>
+
+    <br />
+    <br />
+    <table border="5px" cellpadding="3px" cellspacing="4px">
+      <thead bgcolor="gray">
+        <tr>
+          <th>DAY</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+        </tr>
+      </thead>
+      <tbody bgcolor="aqua">
+        <tr>
+          <td>1</td>
+          <td>fullstack</td>
+          <td>programming</td>
+          <td>dip</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>fullstack</td>
+          <td>programming</td>
+          <td>dip</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td rowspan="2">fullstack</td>
+          <td colspan="2">programming</td>
+          <!-- <td>dip</td> -->
+        </tr>
+        <tr>
+          <td>4</td>
+          <!-- <td>fullstack</td> -->
+          <td>programming</td>
+          <td>dip</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="mailto:divyanshivarshney2002@gmail.com">Go to mail</a> <br />
+    <br />
+    <a href="tel:7417336019">Call me</a>
+
+    <aside>
+      <img
+        src="https://m.media-amazon.com/images/I/81Ze3r9IvEL._SY450_.jpg"
+        alt="My Doraemon"
+      />
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/MJOPrB7o0rktfuyjhguiuj"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </aside>
+
+    <header>
+      <h1>My page</h1>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>Details</li>
+          <li>Information</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <article>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, porro
+      dolore! Deleniti illo ipsa, fuga alias dicta beatae voluptas quibusdam
+      dignissimos? Libero nulla inventore, iure fugiat laudantium neque
+      praesentium obcaecati!
+    </article>
+    <aside >
+      <img
+        src="https://m.media-amazon.com/images/I/81Ze3r9IvEL._SY450_.jpg"
+        alt="My Doraemon"
+      />
+    </aside>
+  </main>
+    <footer>&copy;Divyanshi Varshney</footer>
+    <div id="ttt">DIVYANSHI</div>
+  </body>
+</html>

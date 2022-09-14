@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section:first-child {
+        border: 3px solid green;
+        border-radius: 10px;
+        font: size 10px;
+      }
+      h1 {
+        border: 2px dashed red;
+        border-radius: 10px;
+        font-size: 2em;
+        background-color: rgba(106, 142, 35, 0.556);
+        color: brown;
+      }
+      section:nth-of-type(2) {
+        width: 500px;
+        height: 300px;
+        margin-top: 40px;
+        border: 5px solid red;
+        border-radius: 20px;
+        background: url("https://assets.thehansindia.com/h-upload/2021/09/09/1107922-ganesh-chaturthi.webp");
+        background-size: cover;
+        background-repeaat: no-repeat;
+      }
+      section:nth-of-type(3) {
+        margin-top: 30px;
+        border: 20px dotted darkcyan;
+        padding: 10px;
+        background-color: rgba(128, 128, 128, 0.329);
+        font-size: 1em;
+      }
+      section:nth-of-type(3):hover {
+        color: white;
+        background-color: black;
+        border: 16px dashed gold;
+      }
+      article {
+        font: size 8px;
+      }
+      ul {
+        font-size: 2em;
+      }
+      span {
+        padding: 10px;
+        margin: 5px;
+        display: block;
+        border: 2px solid saddlebrown;
+      }
+      div{
+        width: 100px;
+        height: 200px;
+        border: 2px solid gray;
+        display: inline-block
+      }
+      #relative_middle{
+        position: relative;
+        top: 10px;
+        left: 30px;
+      }
+      #absolute_middle{
+        position: absolute;
+        top: 2900px;
+        left: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1><marquee behavior="alternate" scrollamount="20" direction="right"> MY PAGE</marquee></h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
+        consequuntur ipsa voluptate aspernatur perspiciatis quae accusantium
+        ullam, debitis, ad ipsum voluptas doloribus aliquid asperiores facere
+        tempore ex in assumenda necessitatibus.
+      </p>
+      <center>
+        <img
+          height="100%"
+          width="20%"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSihFw2R2Az36vrfutnrzj3FDmnGBnlV782jQ&usqp=CAU"
+          alt=""
+        />
+      </center>
+    </section>
+    <section></section>
+    <section>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde magni eum
+      reprehenderit voluptatum quis voluptas earum at iure dignissimos! Nam
+      repellendus at veritatis minima dolor distinctio itaque est, totam
+      laborum. Quas rerum pariatur esse, natus dignissimos odio facilis numquam
+      accusantium rem deleniti, ex enim in atque modi? Eius sit molestias
+      dolore! Aliquid atque consectetur sed cum fugit eos magni mollitia qui ab
+      facilis quibusdam, ut assumenda quaerat voluptas sequi amet optio
+      accusantium libero reiciendis earum nam. Esse, rem. Ducimus est, provident
+      minima odit, numquam rem nostrum quo deserunt facilis nihil ipsum dicta
+      consectetur velit consequatur sed perferendis veritatis error ad placeat
+      omnis tenetur in inventore! Ut, quam ratione. Quos veritatis ea quae
+      tempore explicabo odit omnis quia id. Error praesentium iste dolore a
+      sapiente. Delectus expedita temporibus explicabo beatae quasi laboriosam,
+      totam praesentium sit ratione ab possimus rem laborum necessitatibus!
+      Cupiditate architecto consequuntur tempore repellendus ullam quidem
+      similique aut sit ducimus dolorem! Sapiente cum quos corporis dolorem
+      consequatur necessitatibus, sed reiciendis tempore perferendis. Aperiam,
+      molestias iste quaerat quo repudiandae laudantium dolores quis molestiae
+      odit. Eius commodi corrupti, aspernatur ex, quam impedit ipsam saepe
+      suscipit incidunt perspiciatis dolor iusto explicabo laboriosam magnam
+      dolore esse consequuntur ratione nulla quo qui quia ad? Odit architecto
+      earum laborum, iste eaque porro totam molestiae neque fugit sapiente quos
+      facilis molestias voluptatum eligendi necessitatibus aut ipsam cumque
+      facere voluptas aspernatur. Eligendi veniam voluptatibus quia quidem
+      exercitationem corrupti, modi provident, error animi dignissimos
+      laudantium iure est natus magnam atque odio inventore dolorum quo deleniti
+      rerum cumque nulla dolore, pariatur necessitatibus! Nisi, quam nam maiores
+      esse incidunt delectus quos autem, aut nihil, odio totam consequatur at ex
+      rem labore? Voluptatibus, tempore voluptatum? Quis modi ipsum et,
+      aspernatur, amet sapiente eos dolores illo ea impedit debitis odio,
+      officia a molestias! Consequatur ut quasi beatae alias dolor id, minima
+      natus.
+    </section>
+    <article>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>
+          5
+          <ul>
+            <li>5.1</li>
+            <li>5.2</li>
+            <li>5.3</li>
+            <li>5.4</li>
+            <li>5.5</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+    <span>This is span1</span>
+    <span>This is span2</span>
+    <span>This is span3</span>
+    <section id="static">
+        <h1>static position</h1>
+        <div style="background-color: yellowgreen;"></div>
+        <div id="static_middle"  style="background-color: rgba(150, 62, 62, 0.538);"></div>
+        <div style="background-color: blueviolet;"></div>
+    </section>
+    <section id="relative">
+        <h1>relative position</h1>
+        <div style="background-color: yellowgreen;"></div>
+        <div id="relative_middle"  style="background-color: rgba(150, 62, 62, 0.538);"></div>
+        <div style="background-color: blueviolet;"></div>
+    </section>
+    <section id="absolute">
+        <h1>absolute position</h1>
+        <div style="background-color: yellowgreen;"></div>
+        <div id="absolute_middle"  style="background-color: orange;"></div>
+        <div style="background-color: blueviolet;"></div>
+    </section>
+  </body>
+</html>

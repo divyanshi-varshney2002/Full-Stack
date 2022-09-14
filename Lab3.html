@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        height: 500px;
+        width: 400px;
+        border: 2px solid blue;
+        overflow: auto;
+      }
+      ul li {
+        height: 10 px;
+        width: 300px;
+        border: 3px solid green;
+        margin: 5px;
+        border-radius: 10px;
+      }
+
+      img {
+        float: right;
+        border: 2px solid brown;
+        border-radius: 3px;
+        margin: 20px;
+      }
+      p{
+        
+        clear:none;
+      }
+      .container{
+        width: 760px;
+        height: 300px;
+        overflow: auto;
+        border: 2px solid blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box{
+        width: 100px;
+        height: 150px;
+        border: 2px dashed black;
+      }
+      .box:nth-of-type(4){
+        flex-grow: 1;
+      }
+      .box:nth-of-type(2){
+        flex-shrink: 3;
+      }
+      .box:nth-of-type(3){
+        align-self: flex-start;
+      }
+      .box:nth-of-type(1){
+        align-self: flex-end;
+      }
+      .box:nth-of-type(5){
+        align-self: flex-end;
+      }
+      .flexbox{
+        width: 80vw;
+        height: 80vh;
+        border: 2px solid rgb(35, 5, 5);
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb0-5tdcl3FsQXxSrRWMR9W7bRJLogga5eibVAapG_&s");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+        <li>Hello Divyanshi ,how are you? I'm fine . what about u?</li>
+      </ul>
+    </section>
+    <h3>Next Section</h3>
+    <div class="container">
+      
+      <img
+        src="https://png.pngtree.com/thumb_back/fh260/background/20210101/pngtree-double-row-tree-path-with-yellow-deciduous-autumn-leaves-image_519106.jpg"
+        alt=""
+      />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+        accusantium consectetur temporibus earum architecto dignissimos, quae
+        omnis ex sit eos quidem? Maxime, minus totam non, recusandae officiis
+        minima atque magnam qui deserunt, hic accusantium nostrum obcaecati
+        iure. Dolor mollitia vero, animi veniam laborum rerum officiis assumenda
+        dolorum ipsam dignissimos reiciendis quasi quia laboriosam dolores
+        fugiat provident sunt iure sapiente harum facilis error quod veritatis?
+        Exercitationem dignissimos, quibusdam voluptatem quaerat adipisci sunt
+        excepturi cum ratione ut quod autem odio alias iure dolorem culpa
+        voluptatum ducimus voluptates natus, quidem repellendus totam voluptate
+        ea tempora. Totam est saepe in cupiditate quo ipsam laboriosam maiores
+        omnis maxime facere non aut, quod, accusamus quos velit illo aliquid
+        voluptates dolores cum nostrum nisi. Dolore beatae excepturi quam,
+        laborum cupiditate nemo veritatis aliquam consequuntur porro
+        reprehenderit itaque perspiciatis id dolorem modi odit nisi magnam
+        eligendi officiis totam maxime nostrum sint saepe libero repellendus.
+        Sed, consequatur necessitatibus delectus assumenda pariatur soluta
+        explicabo veritatis architecto nulla possimus ullam, minima dolore et
+        excepturi voluptas iure laborum harum ipsam repellendus omnis. Labore
+        velit odio ipsa animi molestias nesciunt libero dicta officia
+        perferendis sequi, neque sint, recusandae mollitia esse in nobis ratione
+        totam debitis sed quaerat numquam necessitatibus sit dolores cumque?
+        Modi?
+      </p>
+    </div>
+    <h1><marquee behavior="alternate" direction="right" scrollamount="10">hum toh dolenge </marquee></h1>
+    <div class="flexbox">
+        <div class="box" style="background-color: red;"></div>
+        <div class="box" style="background-color: rgb(0, 255, 47);"></div>
+        <div class="box" style="background-color: rgb(43, 0, 255);"></div>
+        <div class="box" style="background-color: rgb(255, 0, 140);"></div>
+        <div class="box" style="background-color: rgb(191, 255, 0);"></div>
+        <div class="box" style="background-color: rgb(0, 204, 255);"></div>
+    </div>
+  </body>
+</html>

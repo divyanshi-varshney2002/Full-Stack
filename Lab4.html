@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: black;
+            font-size: 45px;
+            text-shadow: 5px 5px 2px gray;
+            transition: 2s;
+        }
+        h1:hover{
+            scale:2;
+            transform: rotateX(360deg);
+        }
+        p{
+            color: green;
+        }
+        section{
+            border: 5px solid blue;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            /* transition-delay: 2s; */
+            transition-property: all;
+            transition-duration: 1s;
+            border: 2px solid red;
+            margin-top: 20px;
+            background-color: plum;
+        }
+        .container:hover{
+            border-radius: 50%;
+            background-color: yellow;
+        }
+        /* @media screen and (max-width:500px){
+            section{
+                background: radial-gradient(black,gray);
+            }
+            h1{
+                color:white;
+                font-size: xx-large;
+            }
+        } */
+        /* @media screen and (400px < width < 800px){
+            h1{
+                color: red;
+            }
+            section{
+                background-color: green;
+            }
+        } */
+        .box{
+            width: 200px;
+            height: 100px;
+            display: flex;
+            border: 2px solid black;
+            transition: 3s;
+            margin: 10px;
+        }
+        .box:hover{
+            width: 500px;
+        }
+        .one{
+            background-color: rgb(219, 31, 31);
+            transition-timing-function: linear;
+        }
+        .two{
+            background-color: rgb(28, 216, 204);
+            transition-timing-function: ease-in;
+        }
+        .three{
+            background-color: rgb(27, 206, 45);
+            transition-timing-function: ease-out;
+        }
+        .four{
+            background-color: rgb(207, 241, 12);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>This is heading</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla possimus hic asperiores exercitationem ullam id debitis corrupti numquam, quod eaque enim, maiores distinctio, aliquid voluptatibus eius incidunt nemo ducimus quaerat commodi at laborum quos expedita praesentium. Pariatur reiciendis aspernatur voluptatibus ut sunt! Ullam possimus repellendus nesciunt laudantium nam fugit accusamus molestiae libero, velit, sint aperiam inventore officia consequatur. Qui eligendi dolores architecto vel delectus nemo voluptatum, soluta sunt autem ex, vitae nulla veritatis quia molestias quod dicta aperiam voluptatem? Veritatis soluta adipisci quaerat voluptatibus cupiditate saepe! Pariatur at, corporis quidem assumenda, recusandae possimus facilis, id voluptatibus delectus optio nulla repudiandae tempora! Ratione repellendus corporis repellat molestias alias beatae eius itaque at impedit! Sed quidem nam soluta architecto nobis totam rerum, harum iusto exercitationem laudantium ex illo tempora consectetur voluptate in, quaerat laborum consequuntur quia voluptatem deleniti ea? Explicabo architecto illo doloribus fugit autem possimus alias. Magnam voluptatem officia nisi ad eum dicta odit facere corporis cumque repellat! Debitis rem enim architecto magni sint ipsum facere cum eum assumenda consectetur omnis unde, ab distinctio modi itaque, velit consequuntur, explicabo repudiandae id aut? Quisquam ipsa doloremque temporibus asperiores, pariatur quaerat. Quod eligendi facilis nemo ea unde, et sequi minima quia? Praesentium nesciunt corrupti dolores impedit ab. Consectetur rerum voluptates vero dignissimos, maxime voluptate labore minus mollitia. Explicabo delectus nesciunt ratione natus maiores, saepe, nobis reiciendis libero unde aspernatur enim fuga consectetur laudantium nostrum rerum ab? Fugit eius deleniti quaerat saepe mollitia veritatis. In quidem dolor laborum, ut, velit ab rerum quisquam inventore ipsa nulla praesentium porro deserunt aut eum aspernatur impedit perferendis cum dignissimos accusamus hic harum possimus consequuntur magni sequi. Eos recusandae modi quo nam, voluptates rem a voluptatem praesentium cumque quasi dolore numquam doloremque accusantium repudiandae totam odit porro tempora quos provident eligendi illum? Ratione quo culpa vitae sunt officiis.</p>
+    </section>
+    <div class="container">Hi!</div>
+    <!-- <div class="box"> -->
+        <div class="box one">Linear</div>
+        <div class="box two">ease-in</div>
+        <div class="box three">ease-out</div>
+        <div class="box four">cubic bezier</div>
+    <!-- </div> -->
+</body>
+</html>
