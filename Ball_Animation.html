@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .ball{
+            height: 200px;
+            width: 200px;
+            animation-name: slider;
+            animation-duration: 2s;
+            animation-iteration-count:infinite;
+            /* animation-direction: alternate-reverse; */
+            /* animation-play-state: running; */
+        }
+        .shadow{
+            height: 50px;
+            width: 200px;
+            background-color: rgba(128, 128, 128, 0.382);
+            border-radius: 50%;
+            animation-name: neeche;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+        @keyframes neeche {
+            50%{
+                scale: 1.2;
+            }
+        }
+        @keyframes slider {
+            /* 0%{
+                transform: translateY(0px) rotate(360deg);
+            } */
+            50%{
+                transform: translateY(-350px) rotate(180deg);
+            }
+            100%{
+                transform: translateY(0px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+        <div class="ball"><img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/soccer-ball_26bd.png" alt="">
+        </div>
+        <div class="shadow"></div>
+    </div>
+    
+</body>
+</html>
