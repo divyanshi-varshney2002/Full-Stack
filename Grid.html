@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        .container{
+            width: 100%;
+            padding: 10px;
+            display: grid;
+            margin: 100px auto;
+            gap: 20px;
+            row-gap: 50px;
+            grid-template-columns:1fr 2fr 1fr;
+            align-items: center;
+        }
+        .box{
+            background-color: rgb(7, 104, 104);
+            padding: 20px;
+            border: 3px solid black;
+            color: bisque;
+            font-size: 20px;
+        }
+        .box:nth-child(3){
+            align-self: stretch;
+        }
+        .box:nth-child(4){
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .box:nth-child(5){
+            grid-row-start: 3;
+            grid-row-end: 5;
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item 1:
+            <br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem velit iste recusandae atque magnam nemo, nulla rerum ex voluptatibus quis perspiciatis quam expedita est ut corporis nesciunt quia amet! Quasi, eligendi placeat obcaecati alias esse consequuntur voluptatibus quod nobis at debitis hic molestias explicabo est! Perferendis odio ea deleniti tempore.
+        </div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+        <div class="box">Item 4</div>
+        <div class="box">Item 5</div>
+        <div class="box">Item 6</div>
+        <div class="box">Item 7</div>
+        <div class="box">Item 8</div>
+        <div class="box">Item 9</div>
+    </div>
+</body>
+</html>
