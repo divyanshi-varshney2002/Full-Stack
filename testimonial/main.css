@@ -1,5 +1,5 @@
 *{
-    font-family: Barlow Semi Condensed;
+    font-family: cursive;
 }
 body{
     background-color: rgba(15, 15, 113, 0.204);
@@ -56,4 +56,5 @@ body{
 }
 .card_lead{
     font-size: 20px;
+    font-weight: bolder;
 }
