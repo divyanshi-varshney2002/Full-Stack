@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #page {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-areas:
+          "head head head"
+          "nav main aside"
+          "nav foot foot";
+        grid-template-rows: 1fr 4fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+      }
+
+      #page > header {
+        grid-area: head;
+        background-color: #8ca0ff;
+      }
+
+      #page > nav {
+        grid-area: nav;
+        background-color: #ffa08c;
+      }
+
+      #page > main {
+        grid-area: main;
+        background-color: #ffff64;
+      }
+      #page > aside {
+        grid-area: aside;
+        background-color: #af64ff;
+      }
+
+      #page > footer {
+        grid-area: foot;
+        background-color: #8cffa0;
+      }
+      .h {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        color: white;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="page">
+      <header class="h">Header</header>
+      <nav class="h">Navigation</nav>
+      <main class="h">Main area</main>
+      <aside class="h">Aside Area</aside>
+      <footer class="h">Footer</footer>
+    </section>
+  </body>
+</html>
