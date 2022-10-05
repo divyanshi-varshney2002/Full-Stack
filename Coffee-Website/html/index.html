@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee-Website</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        user-select: none;
+      }
+      #Home {
+        width: 100%;
+        height: 900px;
+        background: url("/Coffee-Website/image/home-img.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: black;
+        display: flex;
+        padding: 0px;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.792);
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        margin-left: 300px;
+        justify-content: center;
+      }
+      ul li {
+        list-style: none;
+        display: inline-block;
+      }
+      #logo {
+        margin-left: 150px;
+        margin-top: 15px;
+        width: 100px;
+        height: 100px;
+        background: url("/Coffee-Website/image/logo.png");
+        background-repeat: no-repeat;
+      }
+      #search-shop {
+        margin-top: 50px;
+        margin-left: 300px;
+        font-size: 25px;
+      }
+      #search-shop i {
+        padding: 0 10px;
+      }
+      #search-shop i:hover {
+        color: burlywood;
+        cursor: pointer;
+      }
+      a {
+        color: white;
+        margin: 0 15px;
+        align-items: center;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 1s;
+      }
+      nav ul li a:hover {
+        color: burlywood;
+        border-bottom: 2px solid burlywood;
+      }
+      main {
+        padding-left: 150px;
+        padding-top: 280px;
+      }
+      main h1 {
+        font-size: 70px;
+      }
+      button {
+        width: 150px;
+        height: 50px;
+        background-color: burlywood;
+        font-weight: bolder;
+        font-size: 16px;
+        transition: 1s;
+      }
+      button:hover {
+        width: 200px;
+      }
+      #About {
+        background-color: black;
+      }
+      #About h1 {
+        text-align: center;
+        font-size: 50px;
+      }
+      #about-img {
+        padding: 50px 100px;
+        float: left;
+      }
+      #About aside {
+        padding: 200px 50px;
+      }
+      #Menu {
+        background-color: black;
+        /* display: flex; */
+      }
+      #Menu h1 {
+        text-align: center;
+        font-size: 50px;
+      }
+      #Menu #card{
+        padding: 20px;
+        width: 250px;
+        height: 300px;
+        border: 2px solid gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+      }
+      #Menu #card:hover{
+        background-color: white;
+        color: black;
+      }
+      #Menu .container{
+        display: flex;
+        padding: 20px 50px;
+        justify-content: space-evenly;
+      }
+      #card img{
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Home">
+      <nav>
+        <div id="logo"></div>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Menu">Menu</a></li>
+          <li><a href="#Products">Products</a></li>
+          <li><a href="#Review">Review</a></li>
+          <li><a href="#Contact">Contact</a></li>
+          <li><a href="#Blogs">Blogs</a></li>
+        </ul>
+        <div id="search-shop">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </nav>
+      <main>
+        <h1>
+          FRESH COFFEE IN <br />
+          THE MORNING
+        </h1>
+        <br />
+        <h3 style="color: rgba(245, 222, 179, 0.719)">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis sed<br />
+          nostrum impedit ea alias eprehenderit iste dolor
+        </h3>
+        <br /><button>Get Yours Now</button>
+      </main>
+    </div>
+    <div id="About">
+      <h1><span style="color: burlywood">ABOUT</span> US</h1>
+      <div id="about-img">
+        <img src="/Coffee-Website/image/about-img.jpeg" alt="" />
+      </div>
+      <aside>
+        <h2 style="font-size: 35px">What makes our coffee special?</h2>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          nostrum tempore alias quas earum harum sit accusamus repellendus
+          voluptatum debitis esse, officiis voluptatem et hic! Beatae doloribus
+          temporibus aspernatur quasi.
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          possimus, magni dolorum culpa quaerat corporis sequi minus ab totam
+          illum.
+        </p>
+        <br /><button>Learn More</button>
+      </aside>
+    </div>
+    <div id="Menu">
+      <h1>OUR <span style="color: burlywood">MENU</span></h1>
+      <div class="container">
+      <div id="card">
+        <img src="/Coffee-Website/image/menu-1.png" alt="" />
+        <h3>Testy And Healty</h3>
+        <span style="font-size: 22px;">&dollar; 15.99
+          <span style="text-decoration: line-through; font-size: 15px;  color: gray;">20.99</span></span
+        >
+        <br /><button>Add To Cart</button>
+      </div>
+      <div id="card">
+        <img src="/Coffee-Website/image/menu-2.png" alt="" />
+        <h3>Testy And Healty</h3>
+        <span style="font-size: 22px;">&dollar; 15.99
+          <span style="text-decoration: line-through; font-size: 15px;  color: gray;">20.99</span></span
+        >
+        <br /><button>Add To Cart</button>
+      </div>
+      <div id="card">
+        <img src="/Coffee-Website/image/menu-3.png" alt="" />
+        <h3>Testy And Healty</h3>
+        <span style="font-size: 22px;">&dollar; 15.99
+          <span style="text-decoration: line-through; font-size: 15px;  color: gray;">20.99</span></span
+        >
+        <br /><button>Add To Cart</button>
+      </div>
+      <div id="card">
+        <img src="/Coffee-Website/image/menu-4.png" alt="" />
+        <h3>Testy And Healty</h3>
+        <span style="font-size: 22px;">&dollar; 15.99
+          <span style="text-decoration: line-through; font-size: 15px;  color: gray;">20.99</span></span
+        >
+        <br /><button>Add To Cart</button>
+      </div>
+      <div id="card">
+        <img src="/Coffee-Website/image/menu-5.png" alt="" />
+        <h3>Testy And Healty</h3>
+        <span style="font-size: 22px;">&dollar; 15.99
+          <span style="text-decoration: line-through; font-size: 15px;  color: gray;">20.99</span></span
+        >
+        <br /><button>Add To Cart</button>
+      </div>
+      <div id="card">
+        <img src="/Coffee-Website/image/menu-6.png" alt="" />
+        <h3>Testy And Healty</h3>
+        <span style="font-size: 22px;">&dollar; 15.99
+          <span style="text-decoration: line-through; font-size: 15px;  color: gray;">20.99</span></span
+        >
+        <br /><button>Add To Cart</button>
+      </div>
+    </div>
+    </div>
+    
+  </body>
+</html>
