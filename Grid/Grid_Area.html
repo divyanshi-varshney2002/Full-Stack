@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:cursive;
+      }
       #page {
         display: grid;
         width: 100%;
@@ -17,29 +23,52 @@
         grid-template-rows: 1fr 4fr 1fr;
         grid-template-columns: 1fr 2fr 1fr;
       }
-
-      #page > header {
+      @media screen and (max-width:500px) {
+        #page{
+          grid-template-areas: 
+          "head head "
+          "nav aside"
+          "nav aside"
+          "main main"
+          "foot foot";
+          grid-template-rows: 1fr 1fr 1fr 1.5fr 0.5fr;
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+      @media screen and (max-width:300px) {
+        #page{
+          grid-template-areas: 
+          "head"
+          "nav"
+          "aside"
+          "main"
+          "foot";
+          grid-template-rows:1fr 1fr 1fr 2fr 0.5fr;
+          grid-template-columns: 1fr;
+        }
+      }
+      #page header {
         grid-area: head;
-        background-color: #8ca0ff;
+        background-color:red;
       }
 
-      #page > nav {
+      #page nav {
         grid-area: nav;
-        background-color: #ffa08c;
+        background-color:blue;
       }
 
-      #page > main {
+      #page main {
         grid-area: main;
-        background-color: #ffff64;
+        background-color: purple;
       }
-      #page > aside {
+      #page aside {
         grid-area: aside;
-        background-color: #af64ff;
+        background-color: green;
       }
 
-      #page > footer {
+      #page footer {
         grid-area: foot;
-        background-color: #8cffa0;
+        background-color: goldenrod;
       }
       .h {
         display: flex;
@@ -47,7 +76,6 @@
         align-items: center;
         font-size: 32px;
         color: white;
-        margin-bottom: 10px;
       }
     </style>
   </head>
