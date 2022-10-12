@@ -39,12 +39,23 @@
 // for(let i=0;i<3;i++){
 //     alert(i);
 // }
-let sum=0;
-let a;
-for(let i=0;i<1000;i++){
-    a=prompt();
-    if(a=='0'||a==null) break;
-    a=Number(a);
-    sum=sum+a;
-}
-alert(sum);
+// let sum=0;
+// let a;
+// for(let i=0;i<1000;i++){
+//     a=prompt();
+//     if(a=='0'||a==null) break;
+//     a=Number(a);
+//     sum=sum+a;
+// }
+// alert(sum);
+let num=255;
+console.log(num.toString(6));
+let num2=12.47756;
+console.log(num2.toFixed(3));
+console.log(parseFloat('12.356765432em'));
+let str='this is a string';
+console.log(str);
+console.log(str[5]);
+console.log(str.charAt(3));
+console.log(str.at(-3));
+console.log(str.indexOf('is'));
