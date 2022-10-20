@@ -185,7 +185,7 @@ console.log(Object.values(obj))
 //     else obj[i]++;
 // }
 // console.log(obj);
-
+/*
 let person={
     firstname:"john",
     age: 24
@@ -199,3 +199,5 @@ let p2={
     __proto__:p1
 }
 console.log(p2);
+*/
+
