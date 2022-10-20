@@ -1,0 +1,5 @@
+{
+    "editor.mouseWheelScrollSensitivity": 1,
+    "editor.scrollBeyondLastColumn": 1,
+    "terminal.integrated.scrollback": 1000
+}
