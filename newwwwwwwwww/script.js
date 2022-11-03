@@ -32,7 +32,7 @@ function callback(err, data) {
 }
 fs.readFile("file1.html", "utf-8", callback);
 */
-
+/*
 let a =true;
 setTimeout(function(){
     a=false;
@@ -40,3 +40,36 @@ setTimeout(function(){
 while(a){
     console.log("hello");
 }
+*/
+/*
+let a =true;
+setInterval(function(){
+    while(a){
+    console.log("hello");
+    }
+},1000);
+setTimeout(function(){
+    a=false;
+},10500);
+*/
+/*
+const p=new Promise((function(resolve,reject){
+    setTimeout(()=>{
+        let randomNum=Math.floor(Math.random()*10);
+        console.log(randomNum);
+        if(randomNum%2==0){
+            resolve(randomNum);
+        }
+        else{
+            reject();
+        }
+    },100)
+}))
+p.then((data)=>{
+    console.log(data);
+    console.log("resolved");
+}).catch((err)=>{
+    console.log(err);
+    console.log("rejected");
+})
+*/
