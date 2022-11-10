@@ -75,28 +75,37 @@ p.then((data)=>{
 */
 
 const fs=require("fs");
-const { resolve }=require("path");
-let readFilePromise=fs.promises.readFile("file1.html","utf-8");
+// const { resolve }=require("path");
+// let readFilePromise=fs.promises.readFile("file1.html","utf-8");
+// // console.log(readFilePromise);
+// // resolve(readFilePromise)
+// readFilePromise.then((data)=>{
+//     console.log(data)
+// })
+// async function abc(){
+// let data=await fs.promises.readFile("file1.html","utf-8");
 // console.log(readFilePromise);
-// resolve(readFilePromise)
-readFilePromise.then((data)=>{
-    console.log(data)
-})
-async function abc(){
-let data=await fs.promises.readFile("file1.html","utf-8");
-console.log(readFilePromise);
-return data;
-}
-abc();
+// return data;
+// }
+// abc();
 
-async function abc () {
-    await fs.promises.writeFile("file1.html", "hello123456789");
-    let data = await fs.promises.readFile("file2.html", "utf-8");
-    console.log(data);
-    return "how are you";
-}
+// async function abc () {
+//     await fs.promises.writeFile("file1.html", "hello123456789");
+//     let data = await fs.promises.readFile("file2.html", "utf-8");
+//     console.log(data);
+//     return "how are you";
+// }
 
 async function main() {
     let data = await abc();
     console.log(data);
+}
+abc();
+function abc() {                                             
+    return new Promise(function (res, rej) {
+        fs.promises.readFile("file1.html", "utf-8").then(function (data) {
+            console.log(data);
+            res("resolve");
+        })
+    })
 }
