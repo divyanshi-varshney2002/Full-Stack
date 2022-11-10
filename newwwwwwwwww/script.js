@@ -88,3 +88,15 @@ console.log(readFilePromise);
 return data;
 }
 abc();
+
+async function abc () {
+    await fs.promises.writeFile("file1.html", "hello123456789");
+    let data = await fs.promises.readFile("file2.html", "utf-8");
+    console.log(data);
+    return "how are you";
+}
+
+async function main() {
+    let data = await abc();
+    console.log(data);
+}
