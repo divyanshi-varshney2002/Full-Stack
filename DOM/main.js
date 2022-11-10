@@ -1,0 +1,1 @@
+console.log(document.all[12].innerText)
