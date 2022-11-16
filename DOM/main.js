@@ -21,7 +21,10 @@
 // heading.style.backgroundColor='olive';
 
 var button=document.querySelector('#btn');
-button.addEventListener('click',addEvent);
+button.addEventListener('click',runEvent);
+button.addEventListener('dblclick',runEvent);
+button.addEventListener('mousedown',runEvent);
+button.addEventListener('mouseup',runEvent);
 function addEvent(){
     // console.log('1');
     var mainTitle=document.getElementById('main-header');
@@ -31,6 +34,9 @@ function addEvent(){
 var form =document.getElementById('addForm');
 form.addEventListener('submit',runEvent);
 function runEvent(e){
-    e.preventDefault();
-    console.log('1');
+    // e.preventDefault();
+    // console.log("Event Type:"+e.target.value);
+    console.log("Event Type:"+e.type);
+    // console.log('1');
 }
+
