@@ -208,22 +208,22 @@
       // });
       // document.onload=applyTheme();
 
-      // themes = document.querySelectorAll('[name="theme"]');
-      // themes.forEach((theme) => {
-      //   theme.addEventListener("click", () => store(theme));
-      // });
-      // function store(theme) {
-      //   localStorage.setItem("theme", theme.id);
-      // }
-      // function apply() {
-      //   storedtheme = localStorage.getItem("theme");
-      //   themes.forEach((theme) => {
-      //     if (theme.id === storedtheme) {
-      //       theme.checked = true;
-      //     }
-      //   });
-      // }
-      // document.onload = apply();
+      themes = document.querySelectorAll('[name="theme"]');
+      themes.forEach((theme) => {
+        theme.addEventListener("click", () => store(theme));
+      });
+      function store(theme) {
+        localStorage.setItem("theme", theme.id);
+      }
+      function apply() {
+        storedtheme = localStorage.getItem("theme");
+        themes.forEach((theme) => {
+          if (theme.id === storedtheme) {
+            theme.checked = true;
+          }
+        });
+      }
+      document.onload = apply();
     </script>
   </body>
 </html>
