@@ -4,13 +4,13 @@
     width: fit-content;
     color: black;
 }
-/* .color-changer{
+.color-changer{
     display: flex;
     gap: 20px;
     padding: 10px;
     width: fit-content;
     margin-inline: auto;
-} */
+}
 input[type='radio']{
     appearance: none;
     height: 1.5rem;
