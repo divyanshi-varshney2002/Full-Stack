@@ -1,12 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div style="font-size: 35px; text-align: center;"><a href="./DOM/To-Do list.html">DOM To-Do List With Theme</a></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do list Assignment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <style>
+      .form-control {
+        margin: 50px;
+        background-color: aliceblue;
+        width: fit-content;
+        color: black;
+      }
+      .color-changer {
+        display: flex;
+        gap: 20px;
+        padding: 10px;
+        width: fit-content;
+        margin-inline: auto;
+      }
+      input[type="radio"] {
+        appearance: none;
+        height: 1.5rem;
+        width: 1.5rem;
+        border: 2px solid black;
+        border-radius: 50%;
+      }
+      input[type="radio"]:checked {
+        background-color: var(--radio-color);
+      }
+      #pink {
+        --radio-color: rgb(233, 46, 155);
+      }
+      #light {
+        --radio-color: rgb(252, 9, 53);
+      }
+      #blue {
+        --radio-color: lightblue;
+      }
+      #yellow {
+        --radio-color: rgb(229, 229, 49);
+      }
+      #green {
+        --radio-color: rgb(19, 177, 42);
+      }
+      :root:has(#blue:checked) {
+        background-color: lightblue;
+      }
+      :root:has(#pink:checked) {
+        background-color: pink;
+      }
+      :root:has(#light:checked) {
+        background-color: red;
+      }
+      :root:has(#yellow:checked) {
+        background-color: yellow;
+      }
+      :root:has(#green:checked) {
+        background-color: green;
+      }
+      body {
+        background-color: var(--radio-color);
+      }
+    </style>
+  </head>
+  <body>
+    <header id="main-header" class="bg-primary text-white p-4 mb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 id="header-title">MY LIST</h1>
+          </div>
+          <div class="col-md-6 align-self-center">
+            <input
+              type="text"
+              class="form-control"
+              id="filter"
+              placeholder="Search Items..."
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <form action="" class="form-control">
+      <fieldset class="color-changer">
+        <legend>
+          Change theme :
+          <label for="light"> Red </label>
+          <input type="radio" id="light" name="theme" />
+
+          <label for="blue"> Light </label>
+          <input type="radio" id="blue" name="theme" />
+
+          <label for="pink"> Pink </label>
+          <input type="radio" id="pink" name="theme" />
+
+          <label for="yellow"> Yellow </label>
+          <input type="radio" id="yellow" name="theme" />
+
+          <label for="green"> Green </label>
+          <input type="radio" id="green" name="theme" />
+        </legend>
+      </fieldset>
+    </form>
+    <div class="container">
+      <div id="main" class="card card-body">
+        <h2 class="title">Add Items</h2>
+        <form id="addForm" class="form-inline mb-3">
+          <input type="text" class="form-control mr-2" id="item" />
+          <input type="submit" class="btn btn-dark" value="Submit" />
+        </form>
+        <h2 class="title">Items</h2>
+        <ul id="items" class="list-group">
+          <!-- <li class="list-group-item">Item 1<button class="btn btn-danger btn-sm float-right delete">X</button></li>
+          <li class="list-group-item">Item 2<button class="btn btn-danger btn-sm float-right delete">X</button></li>
+          <li class="list-group-item">Item 3<button class="btn btn-danger btn-sm float-right delete">X</button></li>
+          <li class="list-group-item">Item 4<button class="btn btn-danger btn-sm float-right delete">X</button></li> -->
+        </ul>
+        <br />
+        <input type="submit" id="btn" class="btn btn-dark" />
+      </div>
+    </div>
+    <!-- <script src="./main.js">
+      console.dir(document);
+    </script> -->
+    <script>
+      var items = [];
+      if (localStorage.getItem("items") != null) {
+        items = JSON.parse(localStorage.getItem("items"));
+        items.forEach((item) => {
+          display(item);
+        });
+      }
+
+      form = document.getElementById("addForm");
+      form.addEventListener("submit", additem);
+      document.getElementById("items").addEventListener("click", remove);
+
+      function display(item) {
+        li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `${item}<button class="btn btn-danger btn-sm float-right delete">X</button>`;
+        document.getElementById("items").appendChild(li);
+      }
+
+      function additem(e) {
+        e.preventDefault();
+        item = document.getElementById("item").value;
+        li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `${item}<button class="btn btn-danger btn-sm float-right delete">X</button>`;
+        document.getElementById("items").appendChild(li);
+        this.reset();
+        items.push(item);
+        console.log(items);
+        localStorage.setItem("items", JSON.stringify(items));
+      }
+
+      function remove(e) {
+        el = e.target;
+        if (el.classList.contains("delete")) {
+          p = el.parentElement;
+          this.removeChild(p);
+          v = p.innerText.substring(0, p.innerText.length - 1);
+          items = items.filter((item) => item != v);
+          localStorage.setItem("items", JSON.stringify(items));
+        }
+      }
+
+      function search() {
+        filter = document.getElementById("filter").value.toUpperCase();
+        li = document.getElementsByTagName("li");
+        Array.from(li).forEach((li) => {
+          text = li.innerText.substring(0, li.innerText.length - 1);
+          if (text.toUpperCase().indexOf(filter) == -1) {
+            li.style.display = "none";
+          } else {
+            li.style.display = "";
+          }
+        });
+      }
+
+      // const themeColour=document.querySelector('[name="theme"]');
+      // //store theme
+      // const storeTheme= function(theme){
+      //     localStorage.setItem('theme',theme);
+      // }
+      // const applyTheme=function(){
+      //     const activeTheme=localStorage.getItem('theme');
+      //     themeColour.forEach((themeOption) => {
+      //         if(themeOption==theme){
+      //             themeOption.checked=true;
+      //         }
+      //     });
+      // }
+      // themeColour.forEach((themeOption) => {
+      //     themeOption.addEventListener('click',()=>{
+      //         storeTheme(themeOption.id);
+      //     })
+      // });
+      // document.onload=applyTheme();
+
+      // themes = document.querySelectorAll('[name="theme"]');
+      // themes.forEach((theme) => {
+      //   theme.addEventListener("click", () => store(theme));
+      // });
+      // function store(theme) {
+      //   localStorage.setItem("theme", theme.id);
+      // }
+      // function apply() {
+      //   storedtheme = localStorage.getItem("theme");
+      //   themes.forEach((theme) => {
+      //     if (theme.id === storedtheme) {
+      //       theme.checked = true;
+      //     }
+      //   });
+      // }
+      // document.onload = apply();
+    </script>
+  </body>
 </html>
