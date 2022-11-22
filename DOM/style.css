@@ -28,7 +28,7 @@ input[type='radio']:checked{
     --radio-color: rgb(252, 9, 53);
 }
 #blue{
-    --radio-color: rgb(43, 17, 172);
+    --radio-color: lightblue;
 }
 #yellow{
     --radio-color: rgb(229, 229, 49);
@@ -37,7 +37,7 @@ input[type='radio']:checked{
     --radio-color: rgb(19, 177, 42);
 }
 :root:has(#blue:checked){
-    background-color: royalblue;
+    background-color: lightblue;
 }
 :root:has(#pink:checked){
     background-color: pink;
