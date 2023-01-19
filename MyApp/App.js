@@ -8,7 +8,9 @@ app.listen(port,()=>{
 //   res.send(`server running`);
 // })
 app.get('/', (req, res)=>{
+  res.send('<h1>Welcome to Express</h1>');
   res.send('hello world this is express by --Divyanshi Varshney');
+
 })
 // console.log("Using Express --Divyanshi Varshney");
 // app.listen(3000);
