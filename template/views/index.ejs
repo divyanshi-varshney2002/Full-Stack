@@ -8,6 +8,11 @@
 </head>
 <body>
     <h1>This is EJG file</h1>
-    <h2>randomNumber:<</h2>
+    <h2>Random Number: <%= randomNumber=Math.floor(Math.random()*10) %></h2> 
+    <% if(randomNumber%2==0){ %>
+    <h2>This  is an even number</h2>
+    <% }else{ %>
+    <h2>This is is an odd number</h2>
+    <% } %>
 </body>
 </html>
