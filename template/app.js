@@ -7,6 +7,8 @@ app.get('/home',(req,res)=>{
     const randomNumber=Math.floor(Math.random()*10);
     res.render('index',{randomNumber});
 })
+
+app.set('views',path.join(__dirname,'views','partials'));
 app.use(express.static(path.join(__dirname,'public')))
 app.set('views',path.join(__dirname,'views'))
 app.listen(port,()=>{
