@@ -1,10 +1,16 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const methodOverride =require("method-override");
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
+
+
+
+//override with post having method=delete
+app.use(methodOverride('_method'));
 
 const comments = [
 
@@ -47,6 +53,14 @@ app.get('/comments/:id',(req,res)=>{
     else res.render('show',{comment});
 })
 // we are not taking id as an input from the user, just the username and comment-text
+
+app.get('/comments/:commentid/edit',(req,res)=>{
+    const {commentid} =req.params;
+    const comment=comments.find((comment)=>comment.id===parseInt(commentid));
+    res.render('edit',{comment});
+})
+
+app.patch('/comments/commentid')
 
 app.post('/comments', (req, res) => {
     const { user, text } = req.body;
