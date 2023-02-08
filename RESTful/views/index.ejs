@@ -13,6 +13,7 @@
         <%for(const comment of comments){%>
             <li> 
                 <strong><%= comment.user %></strong> : <%=comment.text %> 
+                <button>Delete</button>
             </li>   
         <%}%>
     </ul>

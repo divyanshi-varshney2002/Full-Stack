@@ -69,7 +69,9 @@ app.patch('/comments/:commentid',(req,res)=>{
 })
 
 app.delete('/comments/:commentid',(req,res)=>{
-    
+    const {commentid}=req.params;
+    comments.filter((comment)=>comment.id!=parseInt(commentid));
+    res.redirect('/comments',{comment});
 })
 
 app.post('/comments', (req, res) => {
