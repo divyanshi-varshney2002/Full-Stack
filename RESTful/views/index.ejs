@@ -7,19 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-
     <h1>All Comments</h1>
-
     <a href="/comments/new"> Add New Comment</a>
-
     <ul>
         <%for(const comment of comments){%>
             <li> 
                 <strong><%= comment.user %></strong> : <%=comment.text %> 
-            </li>
-           
+            </li>   
         <%}%>
     </ul>
-    
 </body>
 </html>

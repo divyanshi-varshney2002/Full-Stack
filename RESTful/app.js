@@ -39,6 +39,13 @@ app.get('/comments/new', (req, res) => {
 });
 
 // Create new comment
+
+app.get('/comments/:id',(req,res)=>{
+    const {id}=req.params;
+    var comment=comments.find((comments)=>comment.id==id)
+    if(comment==undefined) res.send("Not found !!");
+    else res.render('show',{comment});
+})
 // we are not taking id as an input from the user, just the username and comment-text
 
 app.post('/comments', (req, res) => {
