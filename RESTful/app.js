@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const methodOverride =require("method-override");
+const methodOverride=require("method-override");
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -60,7 +60,17 @@ app.get('/comments/:commentid/edit',(req,res)=>{
     res.render('edit',{comment});
 })
 
-app.patch('/comments/commentid')
+app.patch('/comments/:commentid',(req,res)=>{
+    const {commentid} = req.params;
+    const comment=comments.find((comment)=>comment.id===parseInt(commentid));
+    comment.user=req.body.user;
+    comment.text=req.body.text;
+    res.redirect('/comments');
+})
+
+app.delete('/comments/:commentid',(req,res)=>{
+    
+})
 
 app.post('/comments', (req, res) => {
     const { user, text } = req.body;
