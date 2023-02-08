@@ -1,0 +1,19 @@
+body{
+    background-color: purple;
+    text-align: center;
+    color: aqua;
+}
+h2{
+    text-align: center;
+    text-decoration:aliceblue;
+    color:wheat;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    font-size: 16px;
+    justify-content: space-around;
+    background-color: white;
+}

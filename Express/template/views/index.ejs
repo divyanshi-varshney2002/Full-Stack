@@ -1,0 +1,18 @@
+
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+    <h1>This is EJS File</h1>
+    
+    <!-- <h2 > Random Number  : <%= randomeNumber=Math.floor(Math.random()*10) %> </h2> -->
+    <h2><%= randomeNumber %></h2>
+    <%
+    if(randomeNumber%2===0) {%>
+        <h2>This id even</h2>
+    <%}
+    else
+    { %>
+        <h2>this is odd</h2>
+   <% }%>
+
+   <%- include('partials/footer') %>
