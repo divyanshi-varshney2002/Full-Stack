@@ -15,17 +15,17 @@ app.use(methodOverride('_method'));
 const comments = [
 
     {
-        id: 0,
+        id:uuid(),
         user:"john",
         text:"this is john's comment"
     },
     {
-        id: 1,
+        id:uuid(),
         user:"harry",
         text:"this is harry's comment"
     },
     {
-        id: 2,
+        id:uuid(),
         user:"ron",
         text:"this is ron's comment"
     },
