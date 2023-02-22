@@ -9,3 +9,17 @@ const seriesSchema = new mongoose.Schema({
     rating:Number,
     isWatched:Boolean
 })
+
+const Serie=mongoose.model('Serie',seriesSchema)
+//technicall models is a js class
+
+const friends=new Serie({
+    name:"friends reunion",
+    date:2018,
+    rating:8.5,
+    isWatched:false
+})
+
+console.log(friends);
+friends.save()
+.then(()=>console.log("Data Stored in DB"))
